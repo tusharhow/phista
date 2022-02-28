@@ -16,7 +16,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(Duration(seconds: 3), () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => LoginPage()));
     });
     super.initState();
   }
@@ -49,10 +50,10 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             Positioned(
               top: 310,
-              left: 120,
+              left: 100,
               child: Container(
                 child: Text(
-                  'Phista',
+                  'PHISTA',
                   style: TextStyle(
                       color: Color(0xffFFF558),
                       fontSize: 55,

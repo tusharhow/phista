@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:phista/views/auth/login_page.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -17,14 +18,14 @@ class SignUpPage extends StatelessWidget {
                     bottomRight: Radius.circular(30),
                   ),
                   child: Image.asset(
-                    'images/car.jpg',
+                    'images/car3.jpg',
                   ),
                 ),
                 Positioned(
                   top: 100,
                   left: 130,
                   child: Text(
-                    'Phista',
+                    'PHISTA',
                     style: TextStyle(
                         color: Color(0xffFFF558),
                         fontSize: 40,
@@ -339,28 +340,34 @@ class SignUpPage extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Already have an account?',
-                  style: TextStyle(
-                    color: Colors.black38,
-                    fontSize: 16,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LoginPage()));
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Already have an account?',
+                    style: TextStyle(
+                      color: Colors.black38,
+                      fontSize: 16,
+                    ),
                   ),
-                ),
-                SizedBox(
-                  width: 5,
-                ),
-                Text(
-                  'Log In',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+                  SizedBox(
+                    width: 5,
                   ),
-                ),
-              ],
+                  Text(
+                    'Log In',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
             ),
             SizedBox(
               height: 20,

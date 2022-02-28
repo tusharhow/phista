@@ -17,14 +17,14 @@ class LoginPage extends StatelessWidget {
                   bottomRight: Radius.circular(30),
                 ),
                 child: Image.asset(
-                  'images/car.jpg',
+                  'images/car3.jpg',
                 ),
               ),
               Positioned(
                 top: 100,
                 left: 130,
                 child: Text(
-                  'Phista',
+                  'PHISTA',
                   style: TextStyle(
                       color: Color(0xffFFF558),
                       fontSize: 40,
@@ -100,8 +100,8 @@ class LoginPage extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SignUpPage()));
+              // Navigator.push(context,
+              //     MaterialPageRoute(builder: (context) => SignUpPage()));
             },
             child: Container(
               height: 50,
@@ -125,28 +125,34 @@ class LoginPage extends StatelessWidget {
           SizedBox(
             height: 30,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Don\'t have an account?',
-                style: TextStyle(
-                  color: Colors.black38,
-                  fontSize: 18,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SignUpPage()));
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Don\'t have an account?',
+                  style: TextStyle(
+                    color: Colors.black38,
+                    fontSize: 18,
+                  ),
                 ),
-              ),
-              SizedBox(
-                width: 5,
-              ),
-              Text(
-                'Sign Up',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                SizedBox(
+                  width: 5,
                 ),
-              ),
-            ],
+                Text(
+                  'Sign Up',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
